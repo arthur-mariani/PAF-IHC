@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Protótipo acadêmico de alta fidelidade inspirado na estrutura do portal da SEMOB-DF.">
+    <title>Secretaria de Transporte e Mobilidade — Protótipo</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="./assets/js/main.js" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+    <header class="site-header">
+      <div class="government-bar" aria-label="Links do Governo do Distrito Federal">
+        <div class="container government-bar__content">
+          <nav aria-label="Serviços governamentais">
+            <ul class="utility-links">
+              <li><a href="#">Sobre o Governo</a></li>
+              <li><a href="#">Transparência</a></li>
+              <li><a href="#">Ouvidoria</a></li>
+              <li><a href="#">Acesso à informação</a></li>
+              <li><a href="#">Diário Oficial</a></li>
+              <li><a href="#">Dados abertos</a></li>
+            </ul>
+          </nav>
+          <div class="accessibility-tools" aria-label="Ferramentas de acessibilidade">
+            <a href="#acessibilidade">Acessibilidade</a>
+            <button type="button" aria-label="Diminuir tamanho do texto">A−</button>
+            <button type="button" aria-label="Aumentar tamanho do texto">A+</button>
+            <a href="#">Entrar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-bar">
+        <div class="container brand-bar__content">
+          <p class="agency-name">Secretaria de Estado de Transporte e Mobilidade do Distrito Federal</p>
+          <div class="brand-actions">
+            <nav class="social-links" aria-label="Redes sociais">
+              <a href="#" aria-label="Facebook">f</a>
+              <a href="#" aria-label="X">x</a>
+              <a href="#" aria-label="YouTube">▶</a>
+              <a href="#" aria-label="Instagram">◎</a>
+            </nav>
+            <a class="contact-button" href="#contato">Fale com a Secretaria</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="identity-bar">
+        <div class="container identity-bar__content">
+          <a class="gdf-mark" href="./" aria-label="Página inicial">
+            <span class="gdf-mark__symbol" aria-hidden="true">✦</span>
+            <span><strong>GDF</strong><small>Governo do Distrito Federal</small></span>
+          </a>
+
+          <form class="site-search" role="search" action="#" method="get">
+            <label class="sr-only" for="site-search">Buscar no portal</label>
+            <button type="submit" aria-label="Realizar busca">⌕</button>
+            <input id="site-search" name="q" type="search" placeholder="Digite aqui o que você procura">
+          </form>
+        </div>
+      </div>
+
+      <nav class="main-navigation" aria-label="Navegação principal">
+        <div class="container">
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
+            <span aria-hidden="true">☰</span> Menu
+          </button>
+          <ul id="main-menu" class="main-menu">
+            <li><a href="#institucional">Institucional</a></li>
+            <li><a href="#gestao">Gestão administrativa</a></li>
+            <li><a href="#governanca">Governança</a></li>
+            <li><a href="#legislacao">Legislação</a></li>
+            <li><a href="#participacao">Participação</a></li>
+            <li><a href="#rodoviaria">Concessão da Rodoviária</a></li>
+            <li><a href="#dados">Dados STPC</a></li>
+            <li><a href="#pdtu">PDTU</a></li>
+            <li><a href="#ouvidoria">Ouvidoria</a></li>
+            <li><a href="#comunicacao">Comunicação</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="conteudo-principal">
+      <section class="container hero-layout" aria-label="Destaques e acesso rápido">
+        <article class="hero-card">
+          <div class="hero-card__content">
+            <span class="eyebrow">Mobilidade no Distrito Federal</span>
+            <h1>Informação para planejar seus deslocamentos</h1>
+            <p>Acesse serviços, orientações e novidades sobre o transporte público do Distrito Federal.</p>
+            <a class="primary-button" href="#servicos">Ver serviços</a>
+          </div>
+          <div class="hero-card__controls" aria-label="Controles do destaque">
+            <button type="button" aria-label="Destaque anterior">‹</button>
+            <span aria-hidden="true">● ○ ○</span>
+            <button type="button" aria-label="Próximo destaque">›</button>
+          </div>
+        </article>
+
+        <aside class="quick-access" aria-labelledby="quick-access-title">
+          <h2 id="quick-access-title">Acesso Rápido</h2>
+          <nav aria-label="Acesso rápido">
+            <ul>
+              <li><a href="#">DF no Ponto — Linhas e Horários <span>›</span></a></li>
+              <li><a href="#">Mobilidade Transparente <span>›</span></a></li>
+              <li><a href="#">Portal dos condutores <span>›</span></a></li>
+              <li id="credito-futuro" class="quick-access__featured"><a href="#credito-futuro" aria-label="Cartão ou crédito com problema — funcionalidade em desenvolvimento">Cartão ou crédito com problema <span>›</span></a></li>
+              <li><a href="#">Espaços públicos em terminais <span>›</span></a></li>
+              <li><a href="#">Carta de Serviços <span>›</span></a></li>
+              <li><a href="#">STIP Transparente <span>›</span></a></li>
+            </ul>
+          </nav>
+        </aside>
+      </section>
+
+      <section class="section container" id="comunicacao" aria-labelledby="news-title">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Atualizações</span>
+            <h2 id="news-title">Novidades nas Linhas</h2>
+          </div>
+          <a class="text-link" href="#">Veja todas as notícias <span>→</span></a>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-card__image news-card__image--blue" aria-hidden="true"></div>
+            <div class="news-card__body">
+              <time datetime="2026-11-10">10 de novembro de 2026</time>
+              <h3><a href="#">Atualização de linhas e horários do transporte coletivo</a></h3>
+              <p>Espaço demonstrativo para uma notícia de mobilidade publicada na página inicial.</p>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-card__image news-card__image--yellow" aria-hidden="true"></div>
+            <div class="news-card__body">
+              <time datetime="2026-11-10">10 de novembro de 2026</time>
+              <h3><a href="#">Melhorias previstas para terminais e pontos de parada</a></h3>
+              <p>Espaço demonstrativo para uma notícia de infraestrutura e atendimento.</p>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-card__image news-card__image--gray" aria-hidden="true"></div>
+            <div class="news-card__body">
+              <time datetime="2026-11-10">10 de novembro de 2026</time>
+              <h3><a href="#">Participação social em pauta na mobilidade urbana</a></h3>
+              <p>Espaço demonstrativo para audiências, consultas e comunicados públicos.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="services-section" id="servicos" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Encontre rapidamente</span>
+              <h2 id="services-title">Serviços Mais Procurados</h2>
+            </div>
+          </div>
+          <div class="services-grid">
+            <a class="service-card" href="#"><span aria-hidden="true">▣</span>Cartões e pontos de recarga</a>
+            <a class="service-card" href="#"><span aria-hidden="true">⌖</span>Pontos de parada</a>
+            <a class="service-card" href="#"><span aria-hidden="true">▤</span>Terminais e estações BRT</a>
+            <a class="service-card" href="#"><span aria-hidden="true">↔</span>Mobilidade ativa</a>
+            <a class="service-card" href="#"><span aria-hidden="true">▰</span>Preços das passagens</a>
+            <a class="service-card" href="#"><span aria-hidden="true">◉</span>Serviço de táxi</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container institutional-grid" id="institucional">
+        <article class="information-panel">
+          <h2>Projetos e parcerias</h2>
+          <ul class="link-list">
+            <li><a href="#">Avenida das Cidades <span>→</span></a></li>
+            <li><a href="#">VLT via W3 <span>→</span></a></li>
+            <li><a href="#">Projeto Zona Verde <span>→</span></a></li>
+            <li><a href="#">Concessões e infraestrutura <span>→</span></a></li>
+          </ul>
+        </article>
+        <article class="information-panel" id="dados">
+          <h2>Transparência</h2>
+          <ul class="link-list">
+            <li><a href="#">Portal da transparência <span>→</span></a></li>
+            <li><a href="#">Plano de Dados Abertos <span>→</span></a></li>
+            <li><a href="#">Dados do STPC/DF <span>→</span></a></li>
+            <li><a href="#">Acesso à informação <span>→</span></a></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contato">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-title">Secretaria de Estado de Transporte e Mobilidade</p>
+          <p>Base estática acadêmica para o protótipo de alta fidelidade da TAR-07.</p>
+        </div>
+        <div>
+          <h2>Atendimento</h2>
+          <p>Consulte os canais oficiais antes de utilizar informações operacionais.</p>
+        </div>
+        <div>
+          <h2>Acesso rápido</h2>
+          <ul>
+            <li><a href="#acessibilidade">Acessibilidade</a></li>
+            <li><a href="#ouvidoria">Ouvidoria</a></li>
+            <li><a href="#dados">Transparência</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>Protótipo acadêmico — não representa um serviço oficial da SEMOB-DF.</p>
+          <p>© <span data-current-year>2026</span> PAF-IHC</p>
+        </div>
+      </div>
+    </footer>
+
+    <a class="accessibility-fab" id="acessibilidade" href="#conteudo-principal" aria-label="Acessibilidade">✋</a>
+  </body>
+</html>
