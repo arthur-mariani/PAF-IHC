@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Situação demonstrativa do crédito de Vale-Transporte.">
+    <title>Situação do crédito — Vale-Transporte</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <script src="../../assets/js/credit-flow.js" defer></script>
+  </head>
+  <body class="flow-page" data-flow-page="situacao">
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+    <header class="flow-header"><div class="container flow-header__content">
+      <a class="flow-brand" href="../../" aria-label="Voltar para a página inicial"><span class="flow-brand__mark" aria-hidden="true">✦</span><span><strong>SEMOB-DF</strong><small>Transporte e Mobilidade</small></span></a>
+      <a class="flow-header__home" href="../../">Página inicial</a>
+    </div></header>
+    <main id="conteudo-principal" class="flow-main"><div class="flow-container">
+      <nav class="flow-progress" aria-label="Progresso do atendimento"><ol>
+        <li class="is-complete"><span>✓</span><small>Diagnóstico</small></li>
+        <li class="is-current" aria-current="step"><span>2</span><small>Situação</small></li>
+        <li><span>3</span><small>Orientação</small></li>
+        <li><span>4</span><small>Atendimento</small></li>
+      </ol></nav>
+      <section class="flow-card" aria-labelledby="page-title">
+        <p class="flow-kicker">Resultado do diagnóstico</p>
+        <h1 id="page-title">Situação do crédito</h1>
+        <p class="flow-lead" data-status-intro>Com base na informação fornecida, esta é a situação apresentada pelo protótipo.</p>
+        <div class="status-list" data-status-list>
+          <div class="status-item is-success"><span aria-hidden="true">✓</span><div><strong>Enviado pelo empregador</strong><small>O envio foi informado.</small></div></div>
+          <div class="status-item is-success"><span aria-hidden="true">✓</span><div><strong>Processado</strong><small>O crédito passou pelo processamento.</small></div></div>
+          <div class="status-item is-problem"><span aria-hidden="true">×</span><div><strong>Ainda não disponível no cartão</strong><small>O valor ainda não aparece para utilização.</small></div></div>
+          <div class="status-item is-warning"><span aria-hidden="true">!</span><div><strong>Precisa de confirmação ou atualização</strong><small>Uma ação adicional pode ser necessária.</small></div></div>
+        </div>
+        <div class="flow-actions"><a class="secondary-button" href="../">Voltar</a><a class="primary-button" href="../orientacao/?resposta=sim" data-orientation-link>Ver o que fazer</a></div>
+      </section>
+    </div></main>
+  </body>
+</html>

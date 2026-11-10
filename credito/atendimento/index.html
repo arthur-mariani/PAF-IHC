@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Busca demonstrativa de locais de atendimento para Vale-Transporte.">
+    <title>Locais de atendimento — Vale-Transporte</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <script src="../../assets/js/credit-flow.js" defer></script>
+  </head>
+  <body class="flow-page" data-flow-page="atendimento">
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+    <header class="flow-header"><div class="container flow-header__content">
+      <a class="flow-brand" href="../../" aria-label="Voltar para a página inicial"><span class="flow-brand__mark" aria-hidden="true">✦</span><span><strong>SEMOB-DF</strong><small>Transporte e Mobilidade</small></span></a>
+      <a class="flow-header__home" href="../../">Página inicial</a>
+    </div></header>
+    <main id="conteudo-principal" class="flow-main"><div class="flow-container flow-container--wide">
+      <nav class="flow-progress" aria-label="Progresso do atendimento"><ol>
+        <li class="is-complete"><span>✓</span><small>Diagnóstico</small></li>
+        <li class="is-complete"><span>✓</span><small>Situação</small></li>
+        <li class="is-complete"><span>✓</span><small>Orientação</small></li>
+        <li class="is-current" aria-current="step"><span>4</span><small>Atendimento</small></li>
+      </ol></nav>
+      <section class="flow-card" aria-labelledby="page-title">
+        <p class="flow-kicker">Atendimento presencial</p>
+        <h1 id="page-title">Locais de atendimento</h1>
+        <p class="flow-lead">Digite uma região ou endereço para visualizar exemplos de unidades próximas.</p>
+        <form class="location-search" data-location-form>
+          <label for="address">Região ou endereço</label>
+          <div><input id="address" name="endereco" type="search" placeholder="Ex.: Plano Piloto" autocomplete="street-address" required><button class="primary-button" type="submit">Buscar</button></div>
+        </form>
+        <div class="location-layout">
+          <div class="map-placeholder" aria-label="Mapa demonstrativo das unidades">
+            <span class="map-placeholder__road map-placeholder__road--one"></span><span class="map-placeholder__road map-placeholder__road--two"></span>
+            <span class="map-pin map-pin--one" aria-hidden="true">1</span><span class="map-pin map-pin--two" aria-hidden="true">2</span><p>Mapa demonstrativo</p>
+          </div>
+          <div class="location-results" aria-live="polite" data-location-results>
+            <div class="empty-state"><span aria-hidden="true">⌖</span><h2>Informe sua localização</h2><p>Os locais demonstrativos aparecerão aqui após a busca.</p></div>
+          </div>
+        </div>
+        <div class="flow-actions"><a class="secondary-button" href="../orientacao/">Voltar</a><a class="secondary-button" href="../../">Concluir</a></div>
+      </section>
+    </div></main>
+  </body>
+</html>

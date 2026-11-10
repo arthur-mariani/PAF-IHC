@@ -20,7 +20,7 @@ Oferecer uma experiência móvel clara e direta para que a pessoa usuária consi
 
 ## Estado atual
 
-O repositório contém a estrutura completa da página principal:
+O repositório contém a estrutura completa da página principal e o fluxo funcional de orientação:
 
 - barra de serviços governamentais e acessibilidade;
 - identificação da Secretaria e canais de contato;
@@ -33,8 +33,11 @@ O repositório contém a estrutura completa da página principal:
 - projetos, transparência e rodapé;
 - adaptação responsiva para celular, tablet e desktop;
 - menu móvel com atributos de acessibilidade.
-
-O fluxo específico de cartão e crédito será implementado nas próximas etapas. Até lá, o acesso permanece como uma âncora demonstrativa na página principal.
+- diagnóstico sobre o envio do benefício pelo empregador;
+- apresentação da situação do crédito conforme a resposta;
+- orientação sobre o próximo passo;
+- busca demonstrativa de locais de atendimento;
+- preservação da jornada por parâmetros de URL, sem backend.
 
 ## Tecnologias
 
@@ -51,11 +54,17 @@ O projeto não exige Node.js, frameworks, banco de dados ou etapa de compilaçã
 PAF-IHC/
 ├── .nojekyll
 ├── index.html
+├── credito/
+│   ├── index.html
+│   ├── situacao/index.html
+│   ├── orientacao/index.html
+│   └── atendimento/index.html
 └── assets/
     ├── css/
     │   └── styles.css
     └── js/
-        └── main.js
+        ├── main.js
+        └── credit-flow.js
 ```
 
 ## Executar localmente
@@ -101,10 +110,8 @@ A base inclui:
 
 ## Próximas etapas
 
-- implementar o fluxo de diagnóstico do crédito;
-- criar as variações de estado do benefício;
-- adicionar a busca de locais de atendimento;
 - validar textos e procedimentos com fontes oficiais;
+- substituir endereços e horários demonstrativos por dados validados;
 - realizar avaliação de usabilidade do protótipo de alta fidelidade.
 
 ## Padrão de commits

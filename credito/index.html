@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Diagnóstico demonstrativo para indisponibilidade de crédito de Vale-Transporte.">
+    <title>Entender o problema — Crédito de Vale-Transporte</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/credit-flow.js" defer></script>
+  </head>
+  <body class="flow-page">
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+    <header class="flow-header">
+      <div class="container flow-header__content">
+        <a class="flow-brand" href="../" aria-label="Voltar para a página inicial">
+          <span class="flow-brand__mark" aria-hidden="true">✦</span>
+          <span><strong>SEMOB-DF</strong><small>Transporte e Mobilidade</small></span>
+        </a>
+        <a class="flow-header__home" href="../">Página inicial</a>
+      </div>
+    </header>
+    <main id="conteudo-principal" class="flow-main">
+      <div class="flow-container">
+        <nav class="flow-progress" aria-label="Progresso do atendimento">
+          <ol>
+            <li class="is-current" aria-current="step"><span>1</span><small>Diagnóstico</small></li>
+            <li><span>2</span><small>Situação</small></li>
+            <li><span>3</span><small>Orientação</small></li>
+            <li><span>4</span><small>Atendimento</small></li>
+          </ol>
+        </nav>
+        <section class="flow-card" aria-labelledby="page-title">
+          <p class="flow-kicker">Cartão ou crédito com problema</p>
+          <h1 id="page-title">Vamos entender o que aconteceu</h1>
+          <p class="flow-lead">Responda à pergunta abaixo para receber uma orientação adequada à sua situação.</p>
+          <form class="choice-form" action="./situacao/" method="get" data-choice-form>
+            <fieldset>
+              <legend>O empregador informou que enviou o Vale-Transporte?</legend>
+              <label class="choice-card">
+                <input type="radio" name="resposta" value="sim" required>
+                <span><strong>Sim</strong><small>Recebi a confirmação de que o crédito foi enviado.</small></span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="resposta" value="nao">
+                <span><strong>Não</strong><small>O empregador ainda não confirmou o envio.</small></span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="resposta" value="nao-confirmei">
+                <span><strong>Ainda não confirmei</strong><small>Não sei se o benefício já foi enviado.</small></span>
+              </label>
+            </fieldset>
+            <div class="flow-actions">
+              <a class="secondary-button" href="../">Voltar</a>
+              <button class="primary-button" type="submit" disabled data-continue-button>Continuar</button>
+            </div>
+          </form>
+        </section>
+        <aside class="prototype-notice"><strong>Protótipo acadêmico:</strong><span>as informações desta jornada são demonstrativas.</span></aside>
+      </div>
+    </main>
+  </body>
+</html>
