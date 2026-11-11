@@ -38,10 +38,13 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   color: var(--color-text);
   background: var(--color-background);
   font-family: var(--font-family-base);
@@ -89,6 +92,14 @@ ul {
 button {
   border: 0;
   cursor: pointer;
+}
+
+a,
+button,
+input,
+label {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgb(57 127 189 / 18%);
 }
 
 .container {
@@ -684,8 +695,8 @@ button {
 .accessibility-fab {
   position: fixed;
   z-index: 50;
-  right: 1rem;
-  bottom: 1rem;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
   display: grid;
   width: 52px;
   height: 52px;
@@ -895,10 +906,13 @@ button {
 /* Fluxo de orientação sobre crédito */
 .flow-page {
   min-height: 100vh;
+  min-height: 100dvh;
   background: #eef2f5;
 }
 
 .flow-header {
+  padding-right: env(safe-area-inset-right);
+  padding-left: env(safe-area-inset-left);
   color: #fff;
   background: #263845;
   border-bottom: 6px solid var(--color-yellow);
@@ -958,6 +972,9 @@ button {
 
 .flow-main {
   padding-block: clamp(1.25rem, 4vw, 3rem);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: max(clamp(1.25rem, 4vw, 3rem), env(safe-area-inset-bottom));
+  padding-left: env(safe-area-inset-left);
 }
 
 .flow-container {
@@ -1062,6 +1079,7 @@ button {
   font-size: clamp(1.8rem, 5vw, 2.6rem);
   font-weight: 500;
   line-height: 1.15;
+  overflow-wrap: anywhere;
 }
 
 .flow-lead {
@@ -1121,6 +1139,7 @@ button {
 .choice-card strong,
 .choice-card small {
   display: block;
+  overflow-wrap: anywhere;
 }
 
 .choice-card strong {
@@ -1207,6 +1226,13 @@ button {
 .status-item strong,
 .status-item small {
   display: block;
+  overflow-wrap: anywhere;
+}
+
+.status-item > div,
+.guidance-message > div,
+.location-card > div {
+  min-width: 0;
 }
 
 .status-item strong {
@@ -1532,6 +1558,15 @@ button {
     font-size: var(--font-size-base);
   }
 
+  .choice-card,
+  .status-item {
+    min-height: 72px;
+  }
+
+  .location-search input {
+    font-size: 1rem;
+  }
+
   .prototype-notice {
     flex-direction: column;
   }
@@ -1561,5 +1596,72 @@ button {
   .flow-actions--stack-mobile > *,
   .location-search .primary-button {
     width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .flow-brand small {
+    display: none;
+  }
+
+  .flow-progress {
+    margin-bottom: 0.9rem;
+  }
+
+  .flow-progress span {
+    width: 34px;
+    height: 34px;
+  }
+
+  .flow-progress small {
+    max-width: 62px;
+    font-size: 0.6rem;
+  }
+
+  .flow-card {
+    padding: 1.1rem;
+  }
+
+  .flow-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .flow-actions > * {
+    width: 100%;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .flow-header__content {
+    min-height: 58px;
+  }
+
+  .flow-brand__mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .flow-main {
+    padding-top: 0.75rem;
+  }
+
+  .flow-progress {
+    margin-bottom: 0.75rem;
+  }
+
+  .flow-progress small {
+    display: none;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .contact-button:hover,
+  .primary-button:hover,
+  .social-links a:hover,
+  .news-card:hover,
+  .service-card:hover {
+    transform: none;
   }
 }
