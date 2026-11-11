@@ -1,52 +1,62 @@
 # PAF-IHC
 
-> Protótipo acadêmico de alta fidelidade, responsivo e compatível com GitHub Pages, voltado à orientação de usuários com crédito de Vale-Transporte indisponível no cartão.
+> Protótipo acadêmico de alta fidelidade para orientar usuários que não conseguem utilizar o crédito de Vale-Transporte no cartão.
+
+## Versão final
+
+O protótipo está publicado e pode ser acessado pelo endereço:
+
+### [Acessar o protótipo de alta fidelidade](https://arthur-mariani.github.io/PAF-IHC/)
 
 ## Sobre o projeto
 
-O **PAF-IHC** é um protótipo de alta fidelidade desenvolvido para a disciplina de Interação Humano-Computador. A solução parte da **TAR-07 — Resolver indisponibilidade de crédito de Vale-Transporte** e do **Cenário 04**, no qual uma passageira precisa compreender a situação do benefício, identificar o próximo passo e localizar atendimento adequado.
+O **PAF-IHC** foi desenvolvido para a disciplina de Interação Humano-Computador a partir da **TAR-07 — Resolver indisponibilidade de crédito de Vale-Transporte** e do **Cenário 04**.
 
-A interface utiliza como referência a organização visual da página inicial do portal da SEMOB-DF, preservando elementos familiares como cabeçalho institucional, busca, navegação, acesso rápido, notícias, serviços e rodapé. O código foi reconstruído como uma implementação acadêmica independente, sem copiar o backend ou as integrações do portal oficial.
+O problema abordado ocorre quando uma passageira recebe a informação de que o benefício foi enviado pelo empregador, mas o crédito ainda não está disponível no cartão. Nesse contexto, a pessoa precisa compreender a situação, identificar o próximo passo e encontrar um local de atendimento adequado.
+
+A interface utiliza como referência a organização visual do portal da SEMOB-DF, mantendo elementos institucionais familiares. A implementação foi criada de forma independente para fins acadêmicos, sem reproduzir o backend ou as integrações do serviço oficial.
 
 ## Objetivo
 
-Oferecer uma experiência móvel clara e direta para que a pessoa usuária consiga:
+Oferecer uma experiência clara, direta e adequada a dispositivos móveis para que a pessoa usuária consiga:
 
 1. encontrar a opção **“Cartão ou crédito com problema”**;
 2. informar se o empregador confirmou o envio do Vale-Transporte;
-3. compreender o estado apresentado para o crédito;
-4. identificar o próximo passo recomendado;
+3. compreender a situação apresentada para o crédito;
+4. identificar a orientação correspondente;
 5. localizar um ponto de atendimento e consultar seu horário.
 
-## Estado atual
+## Fluxo do protótipo
 
-O repositório contém a estrutura completa da página principal e o fluxo funcional de orientação:
+O fluxo principal é composto por quatro etapas:
 
-- barra de serviços governamentais e acessibilidade;
-- identificação da Secretaria e canais de contato;
-- campo de busca;
-- navegação institucional;
-- área de destaque;
-- painel de acesso rápido;
-- seção de notícias;
-- serviços mais procurados;
-- projetos, transparência e rodapé;
-- adaptação responsiva para celular, tablet e desktop;
-- menu móvel com atributos de acessibilidade.
-- diagnóstico sobre o envio do benefício pelo empregador;
-- apresentação da situação do crédito conforme a resposta;
-- orientação sobre o próximo passo;
+1. **Diagnóstico:** a pessoa informa o que sabe sobre o envio do benefício pelo empregador;
+2. **Situação:** o protótipo apresenta o estado correspondente à resposta;
+3. **Orientação:** a pessoa recebe recomendações sobre o que fazer;
+4. **Atendimento:** a pessoa consulta locais e horários demonstrativos.
+
+## Funcionalidades
+
+- página inicial inspirada na estrutura visual do portal da SEMOB-DF;
+- acesso rápido para problemas relacionados ao cartão ou crédito;
+- diagnóstico com diferentes possibilidades de resposta;
+- apresentação dinâmica da situação do benefício;
+- recomendações adequadas ao cenário informado;
 - busca demonstrativa de locais de atendimento;
-- preservação da jornada por parâmetros de URL, sem backend.
+- indicador visual de progresso entre as etapas;
+- navegação por teclado e foco visível;
+- adaptação para celular, tablet e desktop;
+- otimizações específicas para aparelhos Android e modo paisagem;
+- hospedagem estática pelo GitHub Pages.
 
 ## Tecnologias
 
 - HTML5 semântico;
 - CSS3 responsivo;
 - JavaScript sem dependências externas;
-- GitHub Pages para hospedagem estática.
+- GitHub Pages.
 
-O projeto não exige Node.js, frameworks, banco de dados ou etapa de compilação.
+O projeto não utiliza frameworks, banco de dados ou serviços de backend.
 
 ## Estrutura
 
@@ -67,67 +77,19 @@ PAF-IHC/
         └── credit-flow.js
 ```
 
-## Executar localmente
-
-Na raiz do repositório, execute:
-
-```bash
-python3 -m http.server 8000
-```
-
-Depois, acesse:
-
-```text
-http://localhost:8000
-```
-
-Também é possível abrir `index.html` diretamente, mas o servidor local reproduz melhor o comportamento esperado no GitHub Pages.
-
-## Publicação no GitHub Pages
-
-Todos os arquivos utilizam caminhos relativos e funcionam em um endereço com subdiretório, como `https://<usuario>.github.io/PAF-IHC/`.
-
-Para publicar:
-
-1. abra **Settings → Pages** no repositório;
-2. em **Build and deployment**, escolha **Deploy from a branch**;
-3. selecione a branch `main` e a pasta `/ (root)`;
-4. salve a configuração e aguarde a publicação.
-
-O arquivo `.nojekyll` impede o processamento desnecessário pelo Jekyll.
-
 ## Acessibilidade e responsividade
 
-A base inclui:
+O protótipo inclui:
 
-- link para pular diretamente ao conteúdo principal;
-- navegações identificadas por rótulos acessíveis;
-- foco visível para teclado;
-- alvos de interação adequados para telas móveis;
-- menu com estado `aria-expanded`;
-- respeito à preferência `prefers-reduced-motion`;
-- layouts específicos para diferentes larguras de tela.
-
-## Próximas etapas
-
-- validar textos e procedimentos com fontes oficiais;
-- substituir endereços e horários demonstrativos por dados validados;
-- realizar avaliação de usabilidade do protótipo de alta fidelidade.
-
-## Padrão de commits
-
-O projeto utiliza mensagens curtas e objetivas no padrão de *Conventional Commits*:
-
-```text
-feat: adiciona uma nova funcionalidade
-fix: corrige um comportamento ou defeito
-docs: altera documentação
-style: altera apenas apresentação visual
-refactor: reorganiza o código sem mudar o comportamento
-test: adiciona ou atualiza verificações
-chore: realiza manutenção do projeto
-```
+- link para acesso direto ao conteúdo principal;
+- elementos semânticos e navegações identificadas;
+- rótulos acessíveis para campos e controles;
+- foco visível para navegação por teclado;
+- áreas de toque adequadas para telas móveis;
+- respeito à preferência de redução de movimento;
+- suporte a áreas seguras e diferentes tamanhos de tela;
+- layouts específicos para orientação retrato e paisagem.
 
 ## Aviso
 
-Este projeto possui finalidade acadêmica e **não representa um serviço oficial da SEMOB-DF**. Procedimentos, endereços, horários e responsabilidades institucionais devem ser confirmados em fontes oficiais antes de serem apresentados como informação real.
+Este projeto possui finalidade acadêmica e **não representa um serviço oficial da SEMOB-DF**. Os locais, endereços, horários e procedimentos exibidos no fluxo são demonstrativos e não devem ser utilizados como informação operacional oficial.
